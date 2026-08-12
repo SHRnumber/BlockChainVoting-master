@@ -1,84 +1,182 @@
-# BlockChainVoting
+# Blockchain-Based E-Voting System
 
-A blockchain-based E-voting system, created as the final year project of Shri Bhagubhai Mafatlal Polytechnic. Teammates include me, Sayyam Gada and Charmee Mehta.
-> The application is MIT-Licensed.
+## 📋 Overview
 
-## Build Setup
+A secure, decentralized electronic voting system built on blockchain technology. This final year project was developed by students of Shri Bhagubhai Mafatlal Polytechnic, featuring a robust architecture that ensures transparency, immutability, and security in the voting process.
 
-```bash
-# install dependencies
-npm install
+## ✨ Features
 
-# serve with hot reload at localhost:3000
-npm start
-```
+- **Blockchain-Powered Voting**: Immutable and transparent voting records using Ethereum smart contracts
+- **Secure Authentication**: Company and voter login systems with email verification
+- **Automated Notifications**: Email alerts for candidate registration and voting results
+- **IPFS Integration**: Decentralized storage for candidate images
+- **User-Friendly Interface**: Modern UI built with Next.js and Semantic UI React
+- **Real-time Updates**: Hot reloading for seamless development experience
 
-Create your own <b>.env</b> file and the file should contain:
-```bash
-EMAIL=YOUR_EMAIL_ID
-PASSWORD=YOUR_PASSWORD_FOR_EMAIL_ID
-```
-Install MetaMask extension (https://metamask.io/download.html) and make sure to have some Ether to test the application locally. Ether can be fetched from Rinkeby Faucet (https://faucet.rinkeby.io)
+## 🛠️ Technology Stack
 
-#### Note:
-- Make sure to install Node.js v11.14.0 to make sure the app runs fine. Testing for other node versions is yet to be done.
-- MongoDB must be working in background on localhost:27017
+### Frontend
+- **Next.js** - React framework for server-side rendering
+- **Semantic UI React** - Component library for responsive design
+- **Web3.js** - Ethereum blockchain interaction
 
-###### Please star the repo if it helped you in any way!
+### Backend
+- **Node.js** (v11.14.0) - JavaScript runtime
+- **Express.js** - Web application framework
+- **MongoDB** - NoSQL database for user data
+- **Mongoose** - MongoDB object modeling
 
-## Tech Stack:
+### Blockchain
+- **Solidity** - Smart contract development
+- **Ethereum** - Blockchain platform
+- **MetaMask** - Ethereum wallet integration
 
-- Solidity/Web3 (for writing/connecting the Blockchain contract)
-- Next.js & Semantic UI React (front-end)
-- MongoDB/ExpressJS/Node.js (back-end)
-- IPFS (file storage for images)
+### Storage
+- **IPFS** - Decentralized file storage for candidate images
 
-## Screenshots of the app:
+## 🚀 Installation & Setup
 
-Homepage of the application:
+### Prerequisites
 
-![](screenshots/homepage.PNG)
+1. **Node.js v11.14.0** (Critical for compatibility)
+   ```bash
+   # Using nvm (recommended)
+   nvm install 11.14.0
+   nvm use 11.14.0
+   ```
 
-Company registers/logs in:
+2. **MongoDB** - Ensure it's running on `localhost:27017`
+   ```bash
+   # Linux/Mac
+   sudo service mongod start
+   
+   # Windows
+   net start MongoDB
+   ```
 
-![](screenshots/company_login.PNG)
+3. **MetaMask Extension** - Install from [metamask.io](https://metamask.io/download.html)
+   - Create an Ethereum wallet
+   - Get test Ether from [Rinkeby Faucet](https://faucet.rinkeby.io)
 
-Company creates an election if not created:
+### Installation Steps
 
-![](screenshots/create_election.PNG)
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/yourusername/BlockChainVoting.git
+   cd BlockChainVoting
+   ```
 
-Dashboard on successful election creation:
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-![](screenshots/dashboard.PNG)
+3. **Configure environment variables**
+   
+   Create a `.env` file in the root directory:
+   ```bash
+   EMAIL=your_email@gmail.com
+   PASSWORD=your_email_password
+   ```
 
-List of candidates for the election (here, you can add candidates):
+4. **Start the application**
+   ```bash
+   npm start
+   ```
+   The app will run at `http://localhost:3000`
 
-![](screenshots/candidate_list.PNG)
+## 📱 Application Screenshots
 
-Candidate has been notified on the mail:
+### Homepage
+![Homepage](screenshots/homepage.PNG)
 
-![](screenshots/candidate_registeration_mail.PNG)
+### Company Login
+![Company Login](screenshots/company_login.PNG)
 
-List of voters for the election (here, you can add voters):
+### Create Election
+![Create Election](screenshots/create_election.PNG)
 
-![](screenshots/voterlist.PNG)
+### Dashboard
+![Dashboard](screenshots/dashboard.PNG)
 
-Voters have been sent their secure usernames and passwords on the mail:
+### Candidate Management
+![Candidate List](screenshots/candidate_list.PNG)
 
-![](screenshots/voter_registeration_mail.PNG)
+### Candidate Notification Email
+![Candidate Email](screenshots/candidate_registeration_mail.PNG)
 
-Voter login page:
+### Voter Management
+![Voter List](screenshots/voterlist.PNG)
 
-![](screenshots/voter_login.PNG)
+### Voter Credentials Email
+![Voter Email](screenshots/voter_registeration_mail.PNG)
 
-Successful voting scenario:
+### Voter Login
+![Voter Login](screenshots/voter_login.PNG)
 
-![](screenshots/successful_voting.PNG)
+### Successful Voting
+![Successful Voting](screenshots/successful_voting.PNG)
 
-Unsuccessful voting scenario:
+### Unsuccessful Voting
+![Unsuccessful Voting](screenshots/unsuccessful_voting.PNG)
 
-![](screenshots/unsuccessful_voting.PNG)
+### Winner Notification
+![Winner Email](screenshots/winner_candidate_mail.PNG)
 
-Notification to each candidate and voter for the winner of candidates:
+## 👥 Team Members
 
-![](screenshots/winner_candidate_mail.PNG)
+- **Your Name** - Developer
+- **Sayyam Gada** - Developer
+- **Charmee Mehta** - Developer
+
+## 📄 License
+
+This project is [MIT Licensed](LICENSE) - feel free to use and modify for your own purposes.
+
+## ⭐ Support
+
+If this project helped you, please consider starring the repository on GitHub!
+
+## 🔧 Troubleshooting
+
+### Common Issues
+
+1. **Node.js Version Error**
+   - Ensure you're using Node.js v11.14.0
+   - Check with `node --version`
+
+2. **MetaMask Connection Issues**
+   - Make sure MetaMask is installed and unlocked
+   - Ensure you have sufficient test Ether
+   - Verify Rinkeby network is selected
+
+3. **MongoDB Connection Error**
+   - Confirm MongoDB is running
+   - Check if port 27017 is available
+   - Try restarting MongoDB service
+
+4. **Email Sending Issues**
+   - Verify email credentials in `.env` file
+   - Check if your email provider allows third-party access
+   - Enable "Less secure app access" for Gmail
+
+## 🏗️ Future Enhancements
+
+- [ ] Support for multiple blockchain networks
+- [ ] Mobile application version
+- [ ] Advanced analytics dashboard
+- [ ] Multi-language support
+- [ ] Enhanced security features
+- [ ] Offline voting capability
+
+## 📚 Resources
+
+- [Ethereum Documentation](https://ethereum.org/en/developers/docs/)
+- [Solidity Documentation](https://docs.soliditylang.org/)
+- [MetaMask Documentation](https://docs.metamask.io/)
+- [IPFS Documentation](https://docs.ipfs.io/)
+- [Next.js Documentation](https://nextjs.org/docs)
+
+---
+
+Made with ❤️ by the BlockChainVoting Team
